@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Book a professional cleaning service with MALEON Cleaning Services. Request a free quote for residential or commercial cleaning in Nairobi.">
+    <meta name="keywords"
+        content="Book Cleaning Service, Cleaning Quote Online, Schedule Cleaning Nairobi, Cleaning Prices Kenya">
+    <link rel="icon" href="Images/favicon.svg" type="image/svg+xml">
+    <title>Book a Cleaning Service - MALEON Cleaning Services</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3e6cfda3ed.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="Images/Logo 2.webp" alt="MALEON Cleaning Services Logo">
+                <div class="logo-text"></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Quote.html" class="btn btn-quote">GET A FREE QUOTE</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container">
+            <h1>Book your cleaning service</h1>
+            <p>Fill out the form below to schedule your cleaning.</p>
+        </div>
+    </header>
+
+    <!-- Booking Section -->
+    <section class="booking-section section">
+        <div class="container">
+            <div class="booking-form-container">
+                <form class="booking-form" action="https://formspree.io/f/mlgwbdrz" method="POST">
+
+                    <!-- Contact Information -->
+                    <div class="form-section">
+                        <h2 class="form-section-title">Contact Information</h2>
+                        <p class="form-description">This information will be used to contact you about your service.</p>
+
+                        <div class="form-row">
+                            <div class="form-group half-width">
+                                <label for="name">Your name*</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group half-width">
+                                <label for="address">Your address*</label>
+                                <input type="text" id="address" name="address" placeholder="123 Street Name, City"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group half-width">
+                                <label for="phone">Phone number*</label>
+                                <input type="tel" id="phone" name="phone" placeholder="07XX XXX XXX" required>
+                            </div>
+                            <div class="form-group half-width">
+                                <label for="email">E-mail*</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="form-divider">
+
+                    <!-- Service Requested -->
+                    <div class="form-section">
+                        <h2 class="form-section-title">Service Requested</h2>
+                        <div class="form-group">
+                            <label for="service">Select Service*</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>– Please Select –</option>
+                                <option value="general">General cleaning / warehouses</option>
+                                <option value="floor">Floor scrubbing and polishing</option>
+                                <option value="commercial">Commercial cleaning</option>
+                                <option value="residential">Residential cleaning</option>
+                                <option value="office">Office cleaning</option>
+                                <option value="landscaping">Landscaping</option>
+                                <option value="fumigation">Fumigation</option>
+                                <option value="carpet">Carpet / sofa set cleaning</option>
+                                <option value="cabro">Cabro, terrazzo and tile cleaning</option>
+                                <option value="sanitary">Sanitary hygiene services</option>
+                                <option value="one-off">One-off work services</option>
+                                <option value="other">Other cleaning services</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <hr class="form-divider">
+
+                    <!-- Description -->
+                    <div class="form-section">
+                        <h2 class="form-section-title">Description</h2>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="Describe your cleaning needs..."></textarea>
+                        </div>
+                    </div>
+
+                    <hr class="form-divider">
+
+                    <!-- Schedule -->
+                    <div class="form-section">
+                        <h2 class="form-section-title">Schedule</h2>
+                        <p class="form-description">When would you like us to come?</p>
+
+                        <div class="form-row">
+                            <div class="form-group half-width">
+                                <label for="date">Date*</label>
+                                <div class="input-with-icon">
+                                    <input type="date" id="date" name="date" required>
+                                    <i class="fas fa-calendar-alt input-icon"></i>
+                                </div>
+                            </div>
+                            <div class="form-group half-width">
+                                <label>Time range selector</label>
+                                <div class="time-range-container">
+                                    <span>Any time between</span>
+                                    <div class="time-inputs">
+                                        <select name="start_time" id="start_time">
+                                            <option value="08:00" selected>8:00 AM</option>
+                                            <option value="09:00">9:00 AM</option>
+                                            <option value="10:00">10:00 AM</option>
+                                            <option value="11:00">11:00 AM</option>
+                                            <option value="12:00">12:00 PM</option>
+                                            <option value="13:00">1:00 PM</option>
+                                            <option value="14:00">2:00 PM</option>
+                                            <option value="15:00">3:00 PM</option>
+                                            <option value="16:00">4:00 PM</option>
+                                            <option value="17:00">5:00 PM</option>
+                                        </select>
+                                        <span>and</span>
+                                        <select name="end_time" id="end_time">
+                                            <option value="09:00">9:00 AM</option>
+                                            <option value="10:00">10:00 AM</option>
+                                            <option value="11:00">11:00 AM</option>
+                                            <option value="12:00">12:00 PM</option>
+                                            <option value="13:00">1:00 PM</option>
+                                            <option value="14:00">2:00 PM</option>
+                                            <option value="15:00" selected>3:00 PM</option>
+                                            <option value="16:00">4:00 PM</option>
+                                            <option value="17:00">5:00 PM</option>
+                                            <option value="18:00">6:00 PM</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-submit-container">
+                        <button type="submit" class="btn btn-primary btn-lg">Book Now</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MALEON Cleaning Services</h3>
+                    <p>Experience the difference with our tailored cleaning solutions, expertly crafted to meet your
+                        unique needs. From residential to commercial spaces, our team is dedicated to delivering
+                        sparkling clean environments that exceed your expectations.</p>
+                    <p>Where customer satisfaction is our Goal</p>
+                    <div class="social-links" style="margin-top: 20px;">
+                        <a href="https://www.facebook.com/profile.php?id=61570459680321" target="_blank"
+                            style="color: #fff; margin-right: 15px; font-size: 1.2rem;"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/maleon_cleaners" target="_blank"
+                            style="color: #fff; margin-right: 15px; font-size: 1.2rem;"><i
+                                class="fab fa-instagram"></i></a>
+
+                        <a href="https://www.linkedin.com/in/maleon-cleaning-services-845ab63b0/" target="_blank"
+                            style="color: #fff; font-size: 1.2rem;"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#residential">Residential Cleaning</a></li>
+                        <li><a href="services.html#commercial">Commercial Cleaning</a></li>
+                        <li><a href="services.html#floor">Deep Cleaning</a></li>
+                        <li><a href="services.html#fumigation">Fumigation/pests control</a></li>
+                        <li><a href="services.html#carpet">Carpet cleaning </a></li>
+                        <li><a href="services.html#sanitary">Sanitary service</a></li>
+                        <li><a href="services.html#general">General cleaning </a></li>
+                        <li><a href="services.html#one-off-work">One-off work services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> <a href="tel:0790834422">0790 834 422</a></p>
+                    <p><i class="fas fa-envelope"></i> info@maleoncleaning.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Kenbanco House Moi/Haile
+                        Selassie Avenue Junction</p>
+
+                    <div class="working-hours" style="margin-top: 15px;">
+                        <h4 style="color: #fff; font-size: 1rem; margin-bottom: 5px;">Working Hours</h4>
+                        <p style="margin-bottom: 2px;">Monday - Friday: 8.00am - 5.00pm</p>
+                        <p>Saturday: 8.00am - 12.00pm</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MALEON Cleaning Services. All rights reserved.</p>
+                <p>Proudly Engineered by <a href="#" style="color: #fff; text-decoration: none;">Royal Softwares</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
