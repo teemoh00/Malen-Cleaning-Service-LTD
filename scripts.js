@@ -43,11 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const navbar = document.querySelector('.navbar');
         if (window.scrollY > 50) {
-            navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.boxShadow = '0 6px 20px rgba(0,0,0,0.3)';
+            navbar.style.backgroundColor = 'rgba(9, 86, 81, 0.95)'; // Accent color
         } else {
-            navbar.style.boxShadow = 'none';
-            navbar.style.backgroundColor = '#FFFFFF';
+            navbar.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)';
+            navbar.style.backgroundColor = 'rgba(9, 86, 81, 1)'; // Solid Accent color
         }
     });
 
@@ -244,4 +244,22 @@ document.addEventListener('DOMContentLoaded', () => {
     whatsappButton.className = "whatsapp-float";
     whatsappButton.innerHTML = '<i class="fab fa-whatsapp"></i><span>Chat with Us</span>';
     document.body.appendChild(whatsappButton);
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const questionBtn = item.querySelector('.faq-question');
+        if (questionBtn) {
+            questionBtn.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        }
+    });
 });
