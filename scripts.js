@@ -43,11 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const navbar = document.querySelector('.navbar');
         if (window.scrollY > 50) {
-            navbar.style.boxShadow = '0 6px 20px rgba(0,0,0,0.3)';
-            navbar.style.backgroundColor = 'rgba(9, 86, 81, 0.95)'; // Accent color
+            navbar.style.boxShadow = '0 6px 20px rgba(0,0,0,0.1)';
         } else {
-            navbar.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)';
-            navbar.style.backgroundColor = 'rgba(9, 86, 81, 1)'; // Solid Accent color
+            navbar.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
         }
     });
 
