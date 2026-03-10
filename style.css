@@ -1336,28 +1336,6 @@ img {
 /* --- Services Page Overhaul Styles --- */
 
 /* Services Hero */
-.services-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('Images/Background 2.webp');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    color: #fff;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
-    z-index: 1;
-}
-
-.relative-z {
-    position: relative;
-    z-index: 2;
-}
 
 .hero-buttons {
     margin-top: 30px;
