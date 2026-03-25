@@ -43,8 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const navbar = document.querySelector('.navbar');
         if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
             navbar.style.boxShadow = '0 6px 20px rgba(0,0,0,0.1)';
         } else {
+            navbar.classList.remove('scrolled');
             navbar.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
         }
     });
