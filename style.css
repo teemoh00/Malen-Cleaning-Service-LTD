@@ -117,6 +117,32 @@ img {
     z-index: 1000;
     padding: 0 40px;
     height: 80px;
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    background-color: var(--background-color);
+}
+
+.navbar.scrolled .nav-links a {
+    color: var(--text-dark);
+}
+
+.navbar.scrolled .nav-links a:hover,
+.navbar.scrolled .nav-links a.active {
+    color: var(--primary-color);
+}
+
+.navbar.scrolled .hamburger {
+    color: var(--text-dark);
+}
+
+.navbar.scrolled .company-name .highlight {
+    color: var(--text-dark);
+}
+
+.navbar.scrolled .slogan {
+    color: var(--text-dark);
 }
 
 .navbar .container {
@@ -319,7 +345,7 @@ img {
 
 /* About Section */
 .about {
-    background-color: linear-gradient(to right, #1F77B4, #4CAF50);
+    background-color: var(--secondary-color);
 }
 
 .about-content {
@@ -351,10 +377,12 @@ img {
 .about-text h2 {
     text-align: left;
     margin-bottom: 20px;
+    color: white;
 }
 
 .about-text p {
     margin-bottom: 30px;
+    color: white;
 }
 
 /* Statistics Section */
@@ -541,7 +569,7 @@ img {
 
     .nav-links .btn-quote:hover {
         background-color: var(--text-light);
-        color: var(--primary-color) !important;
+        color: var(--secondary-color) !important;
     }
 
     .hamburger {
