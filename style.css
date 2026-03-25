@@ -127,6 +127,7 @@ img {
     padding: 0 40px;
 }
 
+
 .logo {
     display: flex;
     align-items: center;
@@ -238,6 +239,10 @@ img {
     cursor: pointer;
     color: var(--text-light);
     /* Make hamburger icon visible on white bg */
+}
+.navbar.scrolled {
+    background-color: #ffffff; /* or any color you want */
+    transition: all 0.3s ease;
 }
 
 /* Hero Section */
