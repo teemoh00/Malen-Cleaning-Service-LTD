@@ -374,13 +374,13 @@ img {
     flex: 1;
 }
 
-.about-text h2 {
+.about .about-text h2 {
     text-align: left;
     margin-bottom: 20px;
     color: white;
 }
 
-.about-text p {
+.about .about-text p {
     margin-bottom: 30px;
     color: white;
 }
