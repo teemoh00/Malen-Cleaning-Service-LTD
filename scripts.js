@@ -285,4 +285,38 @@ document.addEventListener('DOMContentLoaded', () => {
         element.classList.add('animate-on-scroll');
         scrollObserver.observe(element);
     });
+
+    // Scroll-to-Top Logic
+    const scrollTopBtn = document.createElement('div');
+    scrollTopBtn.className = 'scroll-to-top';
+    scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    document.body.appendChild(scrollTopBtn);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollTopBtn.classList.add('show');
+        } else {
+            scrollTopBtn.classList.remove('show');
+        }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Inject Preloader ASAP
+if (typeof document !== 'undefined' && document.body) {
+    document.body.insertAdjacentHTML('afterbegin', '<div id="preloader"><div class="loader-spinner"></div></div>');
+}
+
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        preloader.classList.add('fade-out');
+        setTimeout(() => preloader.remove(), 500);
+    }
 });
