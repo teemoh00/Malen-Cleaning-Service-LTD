@@ -262,4 +262,27 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // Scroll Appearance Animations
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Apply animation class and observe elements
+    const elementsToAnimate = document.querySelectorAll('.section, .hero, .about-content, .service-card, .feature-card, .footer-col, .stat-item, .one-off-content');
+    elementsToAnimate.forEach(element => {
+        element.classList.add('animate-on-scroll');
+        scrollObserver.observe(element);
+    });
 });
